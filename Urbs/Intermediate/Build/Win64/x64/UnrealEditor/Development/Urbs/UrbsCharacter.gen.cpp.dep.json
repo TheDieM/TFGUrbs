@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\unrealeditor\\inc\\urbs\\uht\\urbscharacter.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\x64\\urbseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\urbs\\definitions.urbs.h",
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\source\\urbs\\urbscharacter.h",
+            "d:\\juegos\\epicgames\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "d:\\juegos\\epicgames\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "d:\\juegos\\epicgames\\ue_5.4\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "d:\\juegos\\epicgames\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "d:\\juegos\\epicgames\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "d:\\juegos\\epicgames\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "d:\\juegos\\epicgames\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "d:\\juegos\\epicgames\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\unrealeditor\\inc\\urbs\\uht\\urbscharacter.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
