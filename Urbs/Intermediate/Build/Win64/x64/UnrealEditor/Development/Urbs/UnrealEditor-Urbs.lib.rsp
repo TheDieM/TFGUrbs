@@ -7,6 +7,7 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "D:\Documents\Unreal Projects\TFGUrbs\Urbs\Intermediate\Build\Win64\x64\UrbsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"D:\Documents\Unreal Projects\TFGUrbs\Urbs\Intermediate\Build\Win64\x64\UnrealEditor\Development\Urbs\Tabletop.gen.cpp.obj"
 "D:\Documents\Unreal Projects\TFGUrbs\Urbs\Intermediate\Build\Win64\x64\UnrealEditor\Development\Urbs\Urbs.init.gen.cpp.obj"
 "D:\Documents\Unreal Projects\TFGUrbs\Urbs\Intermediate\Build\Win64\x64\UnrealEditor\Development\Urbs\UrbsCharacter.gen.cpp.obj"
 "D:\Documents\Unreal Projects\TFGUrbs\Urbs\Intermediate\Build\Win64\x64\UnrealEditor\Development\Urbs\UrbsGameMode.gen.cpp.obj"
@@ -15,5 +16,6 @@
 "D:\Documents\Unreal Projects\TFGUrbs\Urbs\Intermediate\Build\Win64\x64\UnrealEditor\Development\Urbs\UrbsCharacter.cpp.obj"
 "D:\Documents\Unreal Projects\TFGUrbs\Urbs\Intermediate\Build\Win64\x64\UnrealEditor\Development\Urbs\UrbsGameMode.cpp.obj"
 "D:\Documents\Unreal Projects\TFGUrbs\Urbs\Intermediate\Build\Win64\x64\UnrealEditor\Development\Urbs\UrbsPlayerController.cpp.obj"
+"D:\Documents\Unreal Projects\TFGUrbs\Urbs\Intermediate\Build\Win64\x64\UnrealEditor\Development\Urbs\Tabletop.cpp.obj"
 "D:\Documents\Unreal Projects\TFGUrbs\Urbs\Intermediate\Build\Win64\x64\UnrealEditor\Development\Urbs\Default.rc2.res"
 /OUT:"D:\Documents\Unreal Projects\TFGUrbs\Urbs\Intermediate\Build\Win64\x64\UnrealEditor\Development\Urbs\UnrealEditor-Urbs.lib"

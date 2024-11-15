@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\unrealeditor\\inc\\urbs\\uht\\urbsgamemode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\x64\\urbseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\urbs\\definitions.urbs.h",
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\source\\urbs\\urbsgamemode.h",
+            "d:\\juegos\\epicgames\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "d:\\juegos\\epicgames\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "d:\\juegos\\epicgames\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "d:\\juegos\\epicgames\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\unrealeditor\\inc\\urbs\\uht\\urbsgamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

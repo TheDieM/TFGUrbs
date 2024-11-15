@@ -5,6 +5,8 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"D:/Documents/Unreal Projects/TFGUrbs/Urbs/Content/TopDown/Maps/TopDownMap.umap",
+				"D:/Documents/Unreal Projects/TFGUrbs/Urbs/Content/__ExternalActors__/TopDown/Maps/TopDownMap/2/R9/5TXVDTKPDCRW6R1G5TG61X.uasset",
 				"D:/Documents/Unreal Projects/TFGUrbs/Urbs/Content/__ExternalActors__/TopDown/Maps/TopDownMap/C/M5/2S0ICYCUTIK653O06ATB8T.uasset",
 				"D:/Documents/Unreal Projects/TFGUrbs/Urbs/Content/__ExternalActors__/TopDown/Maps/TopDownMap/C/EK/K75411SFI66JADVMYUHSE9.uasset",
 				"D:/Documents/Unreal Projects/TFGUrbs/Urbs/Content/__ExternalActors__/TopDown/Maps/TopDownMap/C/1E/4Y8WX2VBX0O2F29MA2EFQ3.uasset",
@@ -39,8 +41,7 @@
 				"D:/Documents/Unreal Projects/TFGUrbs/Urbs/Content/__ExternalObjects__/TopDown/Maps/TopDownMap/E/60/LNW66FR8L07Y79WMADIAIZ.uasset",
 				"D:/Documents/Unreal Projects/TFGUrbs/Urbs/Content/__ExternalObjects__/TopDown/Maps/TopDownMap/7/X0/PMOXL3SAM2HXQHUVR9J2AN.uasset",
 				"D:/Documents/Unreal Projects/TFGUrbs/Urbs/Content/__ExternalObjects__/TopDown/Maps/TopDownMap/7/DJ/L93A9ROLR8G18PECTHQYXO.uasset",
-				"D:/Documents/Unreal Projects/TFGUrbs/Urbs/Content/__ExternalObjects__/TopDown/Maps/TopDownMap/2/OD/JN9AMFHJ3BLRX4UL09MSAN.uasset",
-				"D:/Documents/Unreal Projects/TFGUrbs/Urbs/Content/TopDown/Maps/TopDownMap.umap"
+				"D:/Documents/Unreal Projects/TFGUrbs/Urbs/Content/__ExternalObjects__/TopDown/Maps/TopDownMap/2/OD/JN9AMFHJ3BLRX4UL09MSAN.uasset"
 			]
 		}
 	]
