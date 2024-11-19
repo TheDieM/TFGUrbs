@@ -14,11 +14,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define URBS_Tabletop_generated_h
 
-#define FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetYCellCount); \
+	DECLARE_FUNCTION(execGetXCellCount); \
+	DECLARE_FUNCTION(execisRandomizeLayout); \
+	DECLARE_FUNCTION(execGenerateVector); \
+	DECLARE_FUNCTION(execGetHeight); \
 	DECLARE_FUNCTION(execGetTerraininHeight);
 
 
-#define FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATabletop(); \
 	friend struct Z_Construct_UClass_ATabletop_Statics; \
@@ -27,7 +32,7 @@ public: \
 	DECLARE_SERIALIZER(ATabletop)
 
 
-#define FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ATabletop(ATabletop&&); \
@@ -39,13 +44,13 @@ public: \
 	NO_API virtual ~ATabletop();
 
 
-#define FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_9_PROLOG
-#define FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_12_GENERATED_BODY \
+#define FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_11_PROLOG
+#define FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_12_ENHANCED_CONSTRUCTORS \
+	FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_14_INCLASS_NO_PURE_DECLS \
+	FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_Tabletop_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

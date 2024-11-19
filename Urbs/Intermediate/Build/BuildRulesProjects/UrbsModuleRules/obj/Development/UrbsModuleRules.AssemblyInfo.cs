@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UrbsModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f20a84c105981d22b1ac4f0a311b41ba08ef1c0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1218274d54f73857dcfcb182d229afbf2025dbae")]
 [assembly: System.Reflection.AssemblyProductAttribute("UrbsModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UrbsModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
