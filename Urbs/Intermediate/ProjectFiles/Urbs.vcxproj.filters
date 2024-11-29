@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Urbs.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Urbs.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\UrbsEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Urbs">
+      <UniqueIdentifier>{6EF858B5-416F-372D-9864-FAE8B901ECC3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Urbs\LandHex.cpp">
+      <Filter>Source\Urbs</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Urbs\LandHex.h">
+      <Filter>Source\Urbs</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Urbs\MountainHex.cpp">
+      <Filter>Source\Urbs</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Urbs\MountainHex.h">
+      <Filter>Source\Urbs</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Urbs\SeaHex.cpp">
+      <Filter>Source\Urbs</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Urbs\SeaHex.h">
+      <Filter>Source\Urbs</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Urbs\Tabletop.cpp">
+      <Filter>Source\Urbs</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Urbs\Tabletop.h">
+      <Filter>Source\Urbs</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\Urbs\Urbs.Build.cs">
+      <Filter>Source\Urbs</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Urbs\Urbs.cpp">
+      <Filter>Source\Urbs</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Urbs\Urbs.h">
+      <Filter>Source\Urbs</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Urbs\UrbsCharacter.cpp">
+      <Filter>Source\Urbs</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Urbs\UrbsCharacter.h">
+      <Filter>Source\Urbs</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Urbs\UrbsGameMode.cpp">
+      <Filter>Source\Urbs</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Urbs\UrbsGameMode.h">
+      <Filter>Source\Urbs</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Urbs\UrbsPlayerController.cpp">
+      <Filter>Source\Urbs</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Urbs\UrbsPlayerController.h">
+      <Filter>Source\Urbs</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Urbs\VillageHex.cpp">
+      <Filter>Source\Urbs</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Urbs\VillageHex.h">
+      <Filter>Source\Urbs</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

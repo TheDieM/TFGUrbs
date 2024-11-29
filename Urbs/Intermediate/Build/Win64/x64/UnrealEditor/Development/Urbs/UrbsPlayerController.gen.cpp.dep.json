@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\unrealeditor\\inc\\urbs\\uht\\urbsplayercontroller.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\x64\\urbseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\urbs\\definitions.urbs.h",
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\source\\urbs\\urbsplayercontroller.h",
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\unrealeditor\\inc\\urbs\\uht\\urbsplayercontroller.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
