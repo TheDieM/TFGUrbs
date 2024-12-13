@@ -10,9 +10,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeMountainHex() {}
 
 // Begin Cross Module References
-ENGINE_API UClass* Z_Construct_UClass_APawn();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Urbs();
+URBS_API UClass* Z_Construct_UClass_AHex();
 URBS_API UClass* Z_Construct_UClass_AMountainHex();
 URBS_API UClass* Z_Construct_UClass_AMountainHex_NoRegister();
 // End Cross Module References
@@ -54,7 +54,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMountain
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMountainHex_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AMountainHex_Statics::DependentSingletons[])() = {
-	(UObject* (*)())Z_Construct_UClass_APawn,
+	(UObject* (*)())Z_Construct_UClass_AHex,
 	(UObject* (*)())Z_Construct_UPackage__Script_Urbs,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMountainHex_Statics::DependentSingletons) < 16);
@@ -93,10 +93,10 @@ AMountainHex::~AMountainHex() {}
 struct Z_CompiledInDeferFile_FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_MountainHex_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMountainHex, AMountainHex::StaticClass, TEXT("AMountainHex"), &Z_Registration_Info_UClass_AMountainHex, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMountainHex), 2490577300U) },
+		{ Z_Construct_UClass_AMountainHex, AMountainHex::StaticClass, TEXT("AMountainHex"), &Z_Registration_Info_UClass_AMountainHex, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMountainHex), 3702980197U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_MountainHex_h_2448433317(TEXT("/Script/Urbs"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_MountainHex_h_2783083692(TEXT("/Script/Urbs"),
 	Z_CompiledInDeferFile_FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_MountainHex_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_MountainHex_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

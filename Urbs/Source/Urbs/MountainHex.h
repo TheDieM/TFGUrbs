@@ -3,11 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Pawn.h"
+#include "Hex.h"
 #include "MountainHex.generated.h"
 
 UCLASS()
-class URBS_API AMountainHex : public APawn
+class URBS_API AMountainHex : public AHex
 {
 	GENERATED_BODY()
 

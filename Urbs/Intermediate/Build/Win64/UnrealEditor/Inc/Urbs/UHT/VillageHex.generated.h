@@ -19,7 +19,7 @@ private: \
 	static void StaticRegisterNativesAVillageHex(); \
 	friend struct Z_Construct_UClass_AVillageHex_Statics; \
 public: \
-	DECLARE_CLASS(AVillageHex, APawn, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Urbs"), NO_API) \
+	DECLARE_CLASS(AVillageHex, AHex, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Urbs"), NO_API) \
 	DECLARE_SERIALIZER(AVillageHex)
 
 

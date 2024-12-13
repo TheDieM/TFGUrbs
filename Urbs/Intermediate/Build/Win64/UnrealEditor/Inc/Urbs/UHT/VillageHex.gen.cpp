@@ -10,9 +10,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeVillageHex() {}
 
 // Begin Cross Module References
-ENGINE_API UClass* Z_Construct_UClass_APawn();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Urbs();
+URBS_API UClass* Z_Construct_UClass_AHex();
 URBS_API UClass* Z_Construct_UClass_AVillageHex();
 URBS_API UClass* Z_Construct_UClass_AVillageHex_NoRegister();
 // End Cross Module References
@@ -54,7 +54,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AVillageH
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AVillageHex_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AVillageHex_Statics::DependentSingletons[])() = {
-	(UObject* (*)())Z_Construct_UClass_APawn,
+	(UObject* (*)())Z_Construct_UClass_AHex,
 	(UObject* (*)())Z_Construct_UPackage__Script_Urbs,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AVillageHex_Statics::DependentSingletons) < 16);
@@ -93,10 +93,10 @@ AVillageHex::~AVillageHex() {}
 struct Z_CompiledInDeferFile_FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_VillageHex_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AVillageHex, AVillageHex::StaticClass, TEXT("AVillageHex"), &Z_Registration_Info_UClass_AVillageHex, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AVillageHex), 3461824785U) },
+		{ Z_Construct_UClass_AVillageHex, AVillageHex::StaticClass, TEXT("AVillageHex"), &Z_Registration_Info_UClass_AVillageHex, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AVillageHex), 2179201367U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_VillageHex_h_4208466811(TEXT("/Script/Urbs"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_VillageHex_h_2800120537(TEXT("/Script/Urbs"),
 	Z_CompiledInDeferFile_FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_VillageHex_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_VillageHex_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

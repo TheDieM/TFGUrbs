@@ -6,11 +6,11 @@
 // Sets default values
 ASeaHex::ASeaHex()
 {
-
-
-
+	
 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
+	
+	//Set mesh component
 	SeaHexMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	RootComponent = SeaHexMesh;
 
@@ -20,7 +20,7 @@ ASeaHex::ASeaHex()
 		UStaticMesh* mesh = MeshAsset.Object;
 		SeaHexMesh->SetStaticMesh(mesh);
 	}
-
+		
 }
 
 

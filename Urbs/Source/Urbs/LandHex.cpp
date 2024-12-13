@@ -6,9 +6,11 @@
 // Sets default values
 ALandHex::ALandHex()
 {
+	
 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-
+	PrimaryActorTick.bCanEverTick = false;
+	//
+	//Set mesh component
 	LandHexMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	RootComponent = LandHexMesh;
 
@@ -18,6 +20,7 @@ ALandHex::ALandHex()
 		UStaticMesh* mesh = MeshAsset.Object;
 		LandHexMesh->SetStaticMesh(mesh);
 	}
+	
 
 }
 
@@ -25,7 +28,13 @@ ALandHex::ALandHex()
 void ALandHex::BeginPlay()
 {
 	Super::BeginPlay();
+	//OnClicked.__Internal_AddDynamic(this,,&ALandHex::OnSelected);
 
+}
+
+void ALandHex::OnSelected()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Land selected"));
 }
 
 // Called every frame

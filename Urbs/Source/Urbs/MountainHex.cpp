@@ -7,8 +7,9 @@
 AMountainHex::AMountainHex()
 {
 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-
+	PrimaryActorTick.bCanEverTick = false;
+	
+	//Set mesh component
 	MountainHexMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	RootComponent = MountainHexMesh;
 
@@ -18,6 +19,8 @@ AMountainHex::AMountainHex()
 		UStaticMesh* mesh = MeshAsset.Object;
 		MountainHexMesh->SetStaticMesh(mesh);
 	}
+
+	
 
 }
 

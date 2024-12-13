@@ -3,11 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Pawn.h"
+#include "Hex.h"
+
 #include "LandHex.generated.h"
 
 UCLASS()
-class URBS_API ALandHex : public APawn
+class URBS_API ALandHex : public AHex
 {
 	GENERATED_BODY()
 
@@ -22,6 +23,8 @@ private:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	
+	
 
 public:
 	// Called every frame
@@ -29,5 +32,6 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
+	UFUNCTION()
+	void OnSelected();
 };

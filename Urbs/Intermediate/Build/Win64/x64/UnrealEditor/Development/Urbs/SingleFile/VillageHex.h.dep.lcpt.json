@@ -431,6 +431,7 @@
             "d:\\juegos\\epicgames\\ue_5.4\\engine\\source\\runtime\\core\\public\\algo\\impl\\rangepointertype.h",
             "d:\\juegos\\epicgames\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\ray.h",
             "d:\\juegos\\epicgames\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\vector2dhalf.h",
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\source\\urbs\\hex.h",
             "d:\\juegos\\epicgames\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\pawn.h",
             "d:\\juegos\\epicgames\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\objectmacros.h",
             "d:\\juegos\\epicgames\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\script.h",
@@ -635,6 +636,7 @@
             "d:\\juegos\\epicgames\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\ai\\navigation\\navagentinterface.h",
             "d:\\juegos\\epicgames\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\navagentinterface.generated.h",
             "d:\\juegos\\epicgames\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\pawn.generated.h",
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\unrealeditor\\inc\\urbs\\uht\\hex.generated.h",
             "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\unrealeditor\\inc\\urbs\\uht\\villagehex.generated.h"
         ],
         "ImportedModules": [],

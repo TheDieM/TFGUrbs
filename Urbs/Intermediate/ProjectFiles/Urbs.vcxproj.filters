@@ -33,6 +33,12 @@
     <Filter Include="Source\Urbs">
       <UniqueIdentifier>{6EF858B5-416F-372D-9864-FAE8B901ECC3}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Urbs\Hex.cpp">
+      <Filter>Source\Urbs</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Urbs\Hex.h">
+      <Filter>Source\Urbs</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Urbs\LandHex.cpp">
       <Filter>Source\Urbs</Filter>
     </ClCompile>

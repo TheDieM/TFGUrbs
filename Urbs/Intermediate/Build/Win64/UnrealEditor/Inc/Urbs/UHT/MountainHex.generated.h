@@ -19,7 +19,7 @@ private: \
 	static void StaticRegisterNativesAMountainHex(); \
 	friend struct Z_Construct_UClass_AMountainHex_Statics; \
 public: \
-	DECLARE_CLASS(AMountainHex, APawn, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Urbs"), NO_API) \
+	DECLARE_CLASS(AMountainHex, AHex, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Urbs"), NO_API) \
 	DECLARE_SERIALIZER(AMountainHex)
 
 

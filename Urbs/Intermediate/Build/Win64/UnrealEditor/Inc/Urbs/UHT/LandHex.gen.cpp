@@ -10,16 +10,50 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeLandHex() {}
 
 // Begin Cross Module References
-ENGINE_API UClass* Z_Construct_UClass_APawn();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Urbs();
+URBS_API UClass* Z_Construct_UClass_AHex();
 URBS_API UClass* Z_Construct_UClass_ALandHex();
 URBS_API UClass* Z_Construct_UClass_ALandHex_NoRegister();
 // End Cross Module References
 
+// Begin Class ALandHex Function OnSelected
+struct Z_Construct_UFunction_ALandHex_OnSelected_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "LandHex.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ALandHex_OnSelected_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ALandHex, nullptr, "OnSelected", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ALandHex_OnSelected_Statics::Function_MetaDataParams), Z_Construct_UFunction_ALandHex_OnSelected_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ALandHex_OnSelected()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ALandHex_OnSelected_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ALandHex::execOnSelected)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSelected();
+	P_NATIVE_END;
+}
+// End Class ALandHex Function OnSelected
+
 // Begin Class ALandHex
 void ALandHex::StaticRegisterNativesALandHex()
 {
+	UClass* Class = ALandHex::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnSelected", &ALandHex::execOnSelected },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ALandHex);
 UClass* Z_Construct_UClass_ALandHex_NoRegister()
@@ -43,6 +77,10 @@ struct Z_Construct_UClass_ALandHex_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LandHexMesh;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ALandHex_OnSelected, "OnSelected" }, // 2771457574
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ALandHex>::IsAbstract,
 	};
@@ -54,7 +92,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ALandHex_
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ALandHex_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ALandHex_Statics::DependentSingletons[])() = {
-	(UObject* (*)())Z_Construct_UClass_APawn,
+	(UObject* (*)())Z_Construct_UClass_AHex,
 	(UObject* (*)())Z_Construct_UPackage__Script_Urbs,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ALandHex_Statics::DependentSingletons) < 16);
@@ -63,11 +101,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ALandHex_Statics::Class
 	"Game",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_ALandHex_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_ALandHex_Statics::PropPointers),
 	0,
 	0x009000A4u,
@@ -93,10 +131,10 @@ ALandHex::~ALandHex() {}
 struct Z_CompiledInDeferFile_FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_LandHex_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ALandHex, ALandHex::StaticClass, TEXT("ALandHex"), &Z_Registration_Info_UClass_ALandHex, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALandHex), 1194025333U) },
+		{ Z_Construct_UClass_ALandHex, ALandHex::StaticClass, TEXT("ALandHex"), &Z_Registration_Info_UClass_ALandHex, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALandHex), 2594475519U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_LandHex_h_741872751(TEXT("/Script/Urbs"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_LandHex_h_1895495538(TEXT("/Script/Urbs"),
 	Z_CompiledInDeferFile_FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_LandHex_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Documents_Unreal_Projects_TFGUrbs_Urbs_Source_Urbs_LandHex_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -19,7 +19,7 @@ private: \
 	static void StaticRegisterNativesASeaHex(); \
 	friend struct Z_Construct_UClass_ASeaHex_Statics; \
 public: \
-	DECLARE_CLASS(ASeaHex, APawn, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Urbs"), NO_API) \
+	DECLARE_CLASS(ASeaHex, AHex, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Urbs"), NO_API) \
 	DECLARE_SERIALIZER(ASeaHex)
 
 
