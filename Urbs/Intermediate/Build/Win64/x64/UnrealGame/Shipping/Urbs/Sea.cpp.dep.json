@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\documents\\unreal projects\\tfgurbs\\urbs\\source\\urbs\\sea.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\x64\\urbs\\shipping\\engine\\sharedpch.engine.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\x64\\unrealgame\\shipping\\urbs\\definitions.urbs.h",
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\source\\urbs\\sea.h",
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\source\\urbs\\hex.h",
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\unrealgame\\inc\\urbs\\uht\\hex.generated.h",
+            "d:\\documents\\unreal projects\\tfgurbs\\urbs\\intermediate\\build\\win64\\unrealgame\\inc\\urbs\\uht\\sea.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

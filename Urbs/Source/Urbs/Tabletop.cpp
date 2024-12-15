@@ -8,16 +8,15 @@ ATabletop::ATabletop()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
-
-	/*for (int i = 0; i<XCellCount; i++) {
-		Rows Row = Rows(YCellCount);
-		Matrix.Add(Row);
-	}*/
-
-
-
-
-
+	
+	FString s = "/Game/Blueprints/BP_VillageHex";
+	BP_VillageHex = Cast<UBlueprint>(StaticLoadObject(UBlueprint::StaticClass(),nullptr,*s));
+	s = "/Game/Blueprints/BP_LandHex";
+	BP_LandHex = Cast<UBlueprint>(StaticLoadObject(UBlueprint::StaticClass(), nullptr, *s));
+	s = "/Game/Blueprints/BP_MountainHex";
+	BP_MountainHex = Cast<UBlueprint>(StaticLoadObject(UBlueprint::StaticClass(), nullptr, *s));
+	s = "/Game/Blueprints/BP_SeaHex";
+	BP_SeaHex = Cast<UBlueprint>(StaticLoadObject(UBlueprint::StaticClass(), nullptr, *s));
 }
 
 // Called when the game starts or when spawned
@@ -26,9 +25,7 @@ void ATabletop::BeginPlay()
 	Super::BeginPlay();
 
 
-
-
-
+	
 }
 
 // Called every frame
@@ -114,6 +111,8 @@ void ATabletop::GenerateMap()
 	FVector Location;
 	World = GetWorld();
 
+	if (BP_VillageHex == nullptr || BP_LandHex == nullptr || BP_MountainHex == nullptr || BP_SeaHex == nullptr ) UE_LOG(LogTemp, Warning, TEXT("No blueprint"));
+
 	RandomizeLayout();
 
 	Heights.Empty();
@@ -175,17 +174,17 @@ void ATabletop::SetHexType()
 
 void ATabletop::DrawMap()
 {
-
+	
 	for (int i = 0; i < (XCellCount * YCellCount); i++) {
 		if (Matrix[i].Z == -1) {
-			Hexagons.Add(World->SpawnActor<AVillageHex>(SetZ(Matrix[i]), SetRotation(), f));
+			Hexagons.Add(World->SpawnActor<AVillageHex>(BP_VillageHex->GeneratedClass, SetZ(Matrix[i]), SetRotation(), f));
 			continue;
 		}
-		if (Matrix[i].Z == SeaLevel) Hexagons.Add(World->SpawnActor<ASeaHex>(SetZ(Matrix[i]), SetRotation(), f));
-		if (Matrix[i].Z == MountainLevel) Hexagons.Add(World->SpawnActor<AMountainHex>(SetZ(Matrix[i]), SetRotation(), f));
-		if (Matrix[i].Z > SeaLevel && Matrix[i].Z < MountainLevel) Hexagons.Add(World->SpawnActor<ALandHex>(SetZ(Matrix[i]), Rotator, f));
+		if (Matrix[i].Z == SeaLevel) Hexagons.Add(World->SpawnActor<ASeaHex>(BP_SeaHex->GeneratedClass, SetZ(Matrix[i]), SetRotation(), f));
+		if (Matrix[i].Z == MountainLevel) Hexagons.Add(World->SpawnActor<AMountainHex>(BP_MountainHex->GeneratedClass, SetZ(Matrix[i]), SetRotation(), f));
+		if (Matrix[i].Z > SeaLevel && Matrix[i].Z < MountainLevel) Hexagons.Add(World->SpawnActor<ALandHex>(BP_LandHex->GeneratedClass, SetZ(Matrix[i]), Rotator, f));
 	}
-
+	
 }
 
 void ATabletop::DeleteMap()
@@ -198,6 +197,21 @@ void ATabletop::DeleteMap()
 	Rotator.Pitch = 0;
 	Rotator.Roll = 0;
 	Rotator.Yaw = 0;
+}
+
+void ATabletop::TestBP()
+{
+	World = GetWorld();
+	FTransform t;
+	FVector v;
+
+	if (BP_VillageHex == nullptr) UE_LOG(LogTemp, Warning, TEXT("No blueprint"));
+	
+	v.X = 0;
+	v.Y = 0;
+	v.Z = 200;
+	t.SetLocation(v);
+	AActor* SpA = World->SpawnActor<AActor>(BP_VillageHex->GeneratedClass,t,f);
 }
 
 FRotator ATabletop::SetRotation()
