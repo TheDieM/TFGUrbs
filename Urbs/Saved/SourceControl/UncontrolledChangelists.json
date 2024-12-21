@@ -1,0 +1,17 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/adria/Documents/Unreal Projects/TFGUrbs/Urbs/Content/Levels/LV_Game.umap",
+				"C:/Users/adria/Documents/Unreal Projects/TFGUrbs/Urbs/Content/Blueprints/BP_Tabletop.uasset",
+				"C:/Users/adria/Documents/Unreal Projects/TFGUrbs/Urbs/Content/Blueprints/BP_MainMenu.uasset",
+				"C:/Users/adria/Documents/Unreal Projects/TFGUrbs/Urbs/Content/Blueprints/BP_FirstPersonCharacter.uasset",
+				"C:/Users/adria/Documents/Unreal Projects/TFGUrbs/Urbs/Content/Levels/LV_MainMenu.umap",
+				"C:/Users/adria/Documents/Unreal Projects/TFGUrbs/Urbs/Content/Blueprints/BP_FirstPersonGameModeMainMenu.uasset"
+			]
+		}
+	]
+}
