@@ -176,13 +176,13 @@ void ATabletop::DrawMap()
 {
 	
 	for (int i = 0; i < (XCellCount * YCellCount); i++) {
-		if (Matrix[i].Z == -1) {
+		/*if (Matrix[i].Z == -1) {
 			Hexagons.Add(World->SpawnActor<AVillageHex>(BP_VillageHex->GeneratedClass, SetZ(Matrix[i]), SetRotation(), f));
 			continue;
-		}
-		if (Matrix[i].Z == SeaLevel) Hexagons.Add(World->SpawnActor<ASeaHex>(BP_SeaHex->GeneratedClass, SetZ(Matrix[i]), SetRotation(), f));
-		if (Matrix[i].Z == MountainLevel) Hexagons.Add(World->SpawnActor<AMountainHex>(BP_MountainHex->GeneratedClass, SetZ(Matrix[i]), SetRotation(), f));
-		if (Matrix[i].Z > SeaLevel && Matrix[i].Z < MountainLevel) Hexagons.Add(World->SpawnActor<ALandHex>(BP_LandHex->GeneratedClass, SetZ(Matrix[i]), Rotator, f));
+		}*/
+		//if (Matrix[i].Z == SeaLevel) Hexagons.Add(World->SpawnActor<ASeaHex>(BP_SeaHex->GeneratedClass, SetZ(Matrix[i]), SetRotation(), f));
+		//if (Matrix[i].Z == MountainLevel) Hexagons.Add(World->SpawnActor<AMountainHex>(BP_MountainHex->GeneratedClass, SetZ(Matrix[i]), SetRotation(), f));
+		//if (Matrix[i].Z > SeaLevel && Matrix[i].Z < MountainLevel) Hexagons.Add(World->SpawnActor<ALandHex>(BP_LandHex->GeneratedClass, SetZ(Matrix[i]), Rotator, f));
 	}
 	
 }

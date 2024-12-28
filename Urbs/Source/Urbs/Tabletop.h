@@ -55,11 +55,11 @@ public:
 	int BoulderAmplitude = 1000;
 
 	int VoxelSize = 100;
-
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	float MountainLevel = 0.f;
-
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	float SeaLevel = 0.f;
-
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	float VillageLevel = 0.f;
 
 	float RandomValue;
@@ -68,9 +68,9 @@ public:
 
 	TArray<float> Heights;
 
-
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	TArray<FVector> Matrix;
-
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	TArray<AActor*> Hexagons;
 
 

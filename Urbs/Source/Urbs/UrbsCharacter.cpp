@@ -41,6 +41,9 @@ void AUrbsCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+	Pitch += 20;
+	//AddControllerPitchInput(Pitch);
+	
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
@@ -67,7 +70,7 @@ void AUrbsCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
-
+	
 	if (Controller != nullptr)
 	{
 		// add movement 
@@ -80,11 +83,17 @@ void AUrbsCharacter::Look(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D LookAxisVector = Value.Get<FVector2D>();
-
+	
+	
+	UE_LOG(LogTemplateCharacter, Warning, TEXT(" %f , %d "), LookAxisVector.Y, Pitch );
+	if (LookAxisVector.Y > 0 && Pitch > 45) return;
+	if (LookAxisVector.Y < 0 && Pitch < 5) return;
+	
 	if (Controller != nullptr)
 	{
 		// add yaw and pitch input to controller
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
+		Pitch += LookAxisVector.Y;
 	}
 }

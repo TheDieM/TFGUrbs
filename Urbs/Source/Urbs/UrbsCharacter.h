@@ -34,6 +34,8 @@ class AUrbsCharacter : public ACharacter
 	/** Move Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputAction* MoveAction;
+
+	int Pitch = 0;
 	
 public:
 	AUrbsCharacter();

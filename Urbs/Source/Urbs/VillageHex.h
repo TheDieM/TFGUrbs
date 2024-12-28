@@ -15,6 +15,13 @@ public:
 	// Sets default values for this pawn's properties
 	AVillageHex();
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	FString Name = "Figaredo";
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int Level=1;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	bool BelongsToUser = false;
+
 private:
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* VillageHexMesh;
