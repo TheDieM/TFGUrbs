@@ -68,7 +68,10 @@ Urbs/Saved/*
 
 # Compiled source files for the engine to use
 Urbs/Intermediate/*
+Urbs\Intermediate\*
 Urbs/Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 Urbs/DerivedDataCache/*
+/Urbs/Binaries
+/Urbs/Intermediate
