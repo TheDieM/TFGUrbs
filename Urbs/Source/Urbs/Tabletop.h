@@ -72,7 +72,8 @@ public:
 	TArray<FVector> Matrix;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	TArray<AActor*> Hexagons;
-
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	TArray<FString> Names;
 
 
 
@@ -114,8 +115,8 @@ public:
 
 	FVector SetZ(FVector Vector);
 
-
-
+	UFUNCTION(BlueprintCallable)
+	FString GetName();
 
 
 };

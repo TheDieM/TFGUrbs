@@ -42,3 +42,7 @@ void AVillageHex::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 }
+
+void AVillageHex::SetName(FString n){
+	Name=n;
+}
