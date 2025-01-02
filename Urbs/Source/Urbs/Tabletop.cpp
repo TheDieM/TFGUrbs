@@ -17,6 +17,13 @@ ATabletop::ATabletop()
 	BP_MountainHex = Cast<UBlueprint>(StaticLoadObject(UBlueprint::StaticClass(), nullptr, *s));
 	s = "/Game/Blueprints/BP_SeaHex";
 	BP_SeaHex = Cast<UBlueprint>(StaticLoadObject(UBlueprint::StaticClass(), nullptr, *s));
+
+	Names.Add(TEXT("Roma"));
+	Names.Add(TEXT("Ostia"));
+	Names.Add(TEXT("Capua"));
+	Names.Add(TEXT("Tarracina"));
+	Names.Add(TEXT("Antium"));
+	Names.Add(TEXT("Neapolis"));
 }
 
 // Called when the game starts or when spawned
@@ -161,10 +168,10 @@ void ATabletop::SetHexType()
 			Matrix[i].Z = SeaLevel;
 			continue;
 		}
-		if (Matrix[i].Z == VillageLevel) {
+		/*if (Matrix[i].Z == VillageLevel) {
 			Matrix[i].Z = -1;
 			continue;
-		}
+		}*/
 		if (Matrix[i].Z > MountainLevel) {
 			Matrix[i].Z = MountainLevel;
 			continue;
@@ -174,16 +181,18 @@ void ATabletop::SetHexType()
 
 void ATabletop::DrawMap()
 {
-	
-	for (int i = 0; i < (XCellCount * YCellCount); i++) {
-		/*if (Matrix[i].Z == -1) {
-			Hexagons.Add(World->SpawnActor<AVillageHex>(BP_VillageHex->GeneratedClass, SetZ(Matrix[i]), SetRotation(), f));
-			continue;
-		}*/
-		//if (Matrix[i].Z == SeaLevel) Hexagons.Add(World->SpawnActor<ASeaHex>(BP_SeaHex->GeneratedClass, SetZ(Matrix[i]), SetRotation(), f));
-		//if (Matrix[i].Z == MountainLevel) Hexagons.Add(World->SpawnActor<AMountainHex>(BP_MountainHex->GeneratedClass, SetZ(Matrix[i]), SetRotation(), f));
-		//if (Matrix[i].Z > SeaLevel && Matrix[i].Z < MountainLevel) Hexagons.Add(World->SpawnActor<ALandHex>(BP_LandHex->GeneratedClass, SetZ(Matrix[i]), Rotator, f));
-	}
+ int j = 4;
+ int rnd = 0;
+
+	for (int i = 0 ; i < j ; i++){
+		do{
+			rnd= UKismetMathLibrary::RandomInteger(XCellCount * YCellCount);
+			if(Matrix[rnd].Z > SeaLevel && Matrix[rnd].Z < MountainLevel){
+				Matrix[rnd].Z = -1 ;
+			}
+			UE_LOG(LogTemp, Warning, TEXT("valor: %d "),rnd);
+		}while(Matrix[rnd].Z != -1);		
+	}	
 	
 }
 
@@ -245,5 +254,12 @@ FVector ATabletop::SetZ(FVector Vector)
 {
 	Vector.Z = 0;
 	return Vector;
+}
+
+FString ATabletop::GetName(){
+	FString value;
+	value = Names.HeapTop();
+	Names.Remove(value);
+	return value;
 }
 
