@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Hex.h"
-
+#include "VillageHex.h"
 #include "LandHex.generated.h"
 
 UCLASS()
@@ -16,9 +16,17 @@ public:
 	// Sets default values for this pawn's properties
 	ALandHex();
 
-private:
-	UPROPERTY(VisibleAnywhere)
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* LandHexMesh;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int Level = 0;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int WoodBonus = 0;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int StoneBonus = 0;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	AVillageHex* VillageOwner = nullptr;
 
 protected:
 	// Called when the game starts or when spawned

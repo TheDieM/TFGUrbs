@@ -85,7 +85,7 @@ void AUrbsCharacter::Look(const FInputActionValue& Value)
 	FVector2D LookAxisVector = Value.Get<FVector2D>();
 	
 	
-	UE_LOG(LogTemplateCharacter, Warning, TEXT(" %f , %d "), LookAxisVector.Y, Pitch );
+	
 	if (LookAxisVector.Y > 0 && Pitch > 45) return;
 	if (LookAxisVector.Y < 0 && Pitch < 5) return;
 	

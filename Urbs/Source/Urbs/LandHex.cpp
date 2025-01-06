@@ -34,7 +34,7 @@ void ALandHex::BeginPlay()
 
 void ALandHex::OnSelected()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Land selected"));
+	
 }
 
 // Called every frame

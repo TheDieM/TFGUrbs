@@ -21,6 +21,29 @@ public:
 	int Level=1;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	bool BelongsToUser = false;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	TArray<AActor*> Neighborhood;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int Wood = 10;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int Stone = 10;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int Iron = 0;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int Gold = 0;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int Population = 100;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int incWood = 2;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int incStone = 2;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int incIron = 2;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int incGold = 2;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int incPopulation = 2;
+
 
 private:
 	UPROPERTY(VisibleAnywhere)
@@ -39,4 +62,7 @@ public:
 	
 	UFUNCTION(BlueprintCallable)
 	void SetName(FString n);
+
+	UFUNCTION(BlueprintCallable)
+	void SetNeighborhood(ATabletop* tabletop);
 };

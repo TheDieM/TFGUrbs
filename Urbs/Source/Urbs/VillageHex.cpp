@@ -2,6 +2,7 @@
 
 
 #include "VillageHex.h"
+#include "Tabletop.h"
 
 // Sets default values
 AVillageHex::AVillageHex()
@@ -45,4 +46,19 @@ void AVillageHex::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
 void AVillageHex::SetName(FString n){
 	Name=n;
+}
+
+void AVillageHex::SetNeighborhood(ATabletop* tabletop)
+{
+	
+	TArray<AActor*> Hexagons = tabletop->getHexagons();
+	int index = Hexagons.Find(this);
+	UE_LOG(LogTemp, Warning, TEXT("Posición de la ciudad: %d"),index);
+	Neighborhood.Add(Hexagons[index - 1]);
+	Neighborhood.Add(Hexagons[index + 1]);
+	Neighborhood.Add(Hexagons[index - 9]);
+	Neighborhood.Add(Hexagons[index - 10]);
+	Neighborhood.Add(Hexagons[index + 9]);
+	Neighborhood.Add(Hexagons[index + 10]);
+
 }

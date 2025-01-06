@@ -14,11 +14,10 @@ class URBS_API AHex : public APawn
 public:
 	// Sets default values for this pawn's properties
 	AHex();
-	AHex(const TCHAR* Address, UStaticMeshComponent* HexMesh);
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	AActor* Village;
 
-private:
-	//UPROPERTY(VisibleAnywhere)
-	//UStaticMeshComponent* HexMesh;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -29,5 +28,6 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	
 
 };

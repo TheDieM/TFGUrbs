@@ -34,7 +34,8 @@ public:
 	UBlueprint* BP_SeaHex;
 	FRotator Rotator;
 	const FActorSpawnParameters f;
-
+	int year = 0;
+	int season = 0;
 	UPROPERTY(EditAnywhere)
 	int XCellCount = 4;
 	UPROPERTY(EditAnywhere)
@@ -110,7 +111,7 @@ public:
 	void DrawMap();
 
 
-
+	UFUNCTION(BlueprintCallable)
 	FRotator SetRotation();
 
 	FVector SetZ(FVector Vector);
@@ -118,5 +119,12 @@ public:
 	UFUNCTION(BlueprintCallable)
 	FString GetName();
 
+	UFUNCTION(BlueprintCallable)
+	FVector2D GetDate();
 
+	UFUNCTION(BlueprintCallable)
+	FVector2D incDate();
+	
+	UFUNCTION(BlueprintCallable)
+	TArray<AActor*> getHexagons();
 };

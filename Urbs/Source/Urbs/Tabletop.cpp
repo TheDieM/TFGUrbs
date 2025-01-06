@@ -192,8 +192,7 @@ void ATabletop::DrawMap()
 			}
 			UE_LOG(LogTemp, Warning, TEXT("valor: %d "),rnd);
 		}while(Matrix[rnd].Z != -1);		
-	}	
-	
+	}		
 }
 
 void ATabletop::DeleteMap()
@@ -262,4 +261,35 @@ FString ATabletop::GetName(){
 	Names.Remove(value);
 	return value;
 }
+
+FVector2D ATabletop::GetDate()
+{
+	FVector2D value;
+	value.X = year;
+	value.Y = season;
+	return value;
+}
+
+FVector2D ATabletop::incDate()
+{
+	
+	if (season == 3) {
+		season = 0;
+		year++;
+	}
+	else {
+		season++;
+	}
+	
+
+	return GetDate();
+}
+
+TArray<AActor*> ATabletop::getHexagons()
+{
+	return Hexagons;
+}
+
+
+
 
