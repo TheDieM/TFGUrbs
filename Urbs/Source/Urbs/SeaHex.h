@@ -16,8 +16,7 @@ public:
 	ASeaHex();
 
 
-private:
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* SeaHexMesh;
 
 protected:

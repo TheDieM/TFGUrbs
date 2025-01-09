@@ -34,19 +34,17 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	int Population = 100;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-	int incWood = 2;
+	int incWood = 0;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-	int incStone = 2;
+	int incStone = 0;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-	int incIron = 2;
+	int incIron = 0;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-	int incGold = 2;
+	int incGold = 0;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	int incPopulation = 2;
 
-
-private:
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* VillageHexMesh;
 
 protected:

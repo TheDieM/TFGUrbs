@@ -186,7 +186,9 @@ void ATabletop::DrawMap()
 
 	for (int i = 0 ; i < j ; i++){
 		do{
-			rnd= UKismetMathLibrary::RandomInteger(XCellCount * YCellCount);
+			do{
+				rnd = UKismetMathLibrary::RandomInteger(XCellCount * YCellCount);				
+			} while ( rnd % 10 == 0 ||rnd % 10 == 9 || rnd < XCellCount || rnd> XCellCount * YCellCount-XCellCount);
 			if(Matrix[rnd].Z > SeaLevel && Matrix[rnd].Z < MountainLevel){
 				Matrix[rnd].Z = -1 ;
 			}

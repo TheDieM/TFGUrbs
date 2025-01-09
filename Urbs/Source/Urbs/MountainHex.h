@@ -15,8 +15,7 @@ public:
 	// Sets default values for this pawn's properties
 	AMountainHex();
 
-private:
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* MountainHexMesh;
 
 protected:

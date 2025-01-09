@@ -55,15 +55,21 @@ void AVillageHex::SetNeighborhood(ATabletop* tabletop)
 	int index = Hexagons.Find(this);
 	UE_LOG(LogTemp, Warning, TEXT("Posición de la ciudad: %d"),index);
 	
-	if(index < 98)Neighborhood.Add(Hexagons[index + 1]);
-	if(index > 1)Neighborhood.Add(Hexagons[index - 1]);
-	if (index > 10) {
+	if(index/10%2==0){
+		Neighborhood.Add(Hexagons[index + 1]);
+		Neighborhood.Add(Hexagons[index - 1]);
 		Neighborhood.Add(Hexagons[index - 9]);
 		Neighborhood.Add(Hexagons[index - 10]);
-	}	
-	if (index < 89) {
-		Neighborhood.Add(Hexagons[index + 9]);
 		Neighborhood.Add(Hexagons[index + 10]);
+		Neighborhood.Add(Hexagons[index + 11]);
+	}
+	else {
+		Neighborhood.Add(Hexagons[index + 1]);
+		Neighborhood.Add(Hexagons[index - 1]);
+		Neighborhood.Add(Hexagons[index - 11]);
+		Neighborhood.Add(Hexagons[index - 10]);
+		Neighborhood.Add(Hexagons[index + 10]);
+		Neighborhood.Add(Hexagons[index + 9]);
 	}
 	
 
