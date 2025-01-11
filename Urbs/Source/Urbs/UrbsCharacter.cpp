@@ -42,7 +42,7 @@ void AUrbsCharacter::BeginPlay()
 	// Call the base class  
 	Super::BeginPlay();
 	Pitch += 20;
-	//AddControllerPitchInput(Pitch);
+	
 	
 }
 

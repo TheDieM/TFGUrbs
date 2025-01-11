@@ -23,24 +23,3 @@ ASeaHex::ASeaHex()
 		
 }
 
-
-// Called when the game starts or when spawned
-void ASeaHex::BeginPlay()
-{
-	Super::BeginPlay();
-
-}
-
-// Called every frame
-void ASeaHex::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-}
-
-// Called to bind functionality to input
-void ASeaHex::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-}

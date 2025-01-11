@@ -16,11 +16,14 @@ public:
 	AVillageHex();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	UStaticMeshComponent* VillageHexMesh;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	FString Name = "Figaredo";
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	int Level=1;
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-	bool BelongsToUser = false;
+	//UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	//bool BelongsToUser = false;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	TArray<AActor*> Neighborhood;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
@@ -28,7 +31,7 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	int Stone = 10;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-	int Iron = 0;
+	int Wheat = 0;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	int Gold = 0;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
@@ -38,25 +41,13 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	int incStone = 0;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-	int incIron = 0;
+	int incWheat = 0;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	int incGold = 0;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	int incPopulation = 2;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-	UStaticMeshComponent* VillageHexMesh;
-
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
-public:
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	
 	
 	UFUNCTION(BlueprintCallable)
 	void SetName(FString n);

@@ -23,27 +23,6 @@ AVillageHex::AVillageHex()
 
 }
 
-// Called when the game starts or when spawned
-void AVillageHex::BeginPlay()
-{
-	Super::BeginPlay();
-
-}
-
-// Called every frame
-void AVillageHex::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-}
-
-// Called to bind functionality to input
-void AVillageHex::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-}
-
 void AVillageHex::SetName(FString n){
 	Name=n;
 }

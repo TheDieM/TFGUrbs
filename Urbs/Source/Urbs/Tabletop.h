@@ -28,10 +28,6 @@ protected:
 public:
 
 	UWorld* World = nullptr;
-	UBlueprint* BP_VillageHex;
-	UBlueprint* BP_LandHex;
-	UBlueprint* BP_MountainHex;
-	UBlueprint* BP_SeaHex;
 	FRotator Rotator;
 	const FActorSpawnParameters f;
 	int year = 0;
@@ -81,11 +77,11 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void GenerateMap();
 
-	UFUNCTION(BlueprintCallable)
-	void DeleteMap();
+	//UFUNCTION(BlueprintCallable)
+	//void DeleteMap();
 
-	UFUNCTION(BlueprintCallable)
-	void TestBP();
+	//UFUNCTION(BlueprintCallable)
+	//void TestBP();
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

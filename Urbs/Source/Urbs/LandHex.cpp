@@ -24,29 +24,3 @@ ALandHex::ALandHex()
 
 }
 
-// Called when the game starts or when spawned
-void ALandHex::BeginPlay()
-{
-	Super::BeginPlay();
-	//OnClicked.__Internal_AddDynamic(this,,&ALandHex::OnSelected);
-
-}
-
-void ALandHex::OnSelected()
-{
-	
-}
-
-// Called every frame
-void ALandHex::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-}
-
-// Called to bind functionality to input
-void ALandHex::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-}

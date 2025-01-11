@@ -9,15 +9,7 @@ ATabletop::ATabletop()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 	
-	FString s = "/Game/Blueprints/BP_VillageHex";
-	BP_VillageHex = Cast<UBlueprint>(StaticLoadObject(UBlueprint::StaticClass(),nullptr,*s));
-	s = "/Game/Blueprints/BP_LandHex";
-	BP_LandHex = Cast<UBlueprint>(StaticLoadObject(UBlueprint::StaticClass(), nullptr, *s));
-	s = "/Game/Blueprints/BP_MountainHex";
-	BP_MountainHex = Cast<UBlueprint>(StaticLoadObject(UBlueprint::StaticClass(), nullptr, *s));
-	s = "/Game/Blueprints/BP_SeaHex";
-	BP_SeaHex = Cast<UBlueprint>(StaticLoadObject(UBlueprint::StaticClass(), nullptr, *s));
-
+	//Generate Names Array
 	Names.Add(TEXT("Roma"));
 	Names.Add(TEXT("Ostia"));
 	Names.Add(TEXT("Capua"));
@@ -29,17 +21,13 @@ ATabletop::ATabletop()
 // Called when the game starts or when spawned
 void ATabletop::BeginPlay()
 {
-	Super::BeginPlay();
-
-
-	
+	Super::BeginPlay();		
 }
 
 // Called every frame
 void ATabletop::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 
@@ -52,12 +40,7 @@ float ATabletop::GetTerraininHeight(const FVector2D Location, const float Scale,
 }
 
 
-/***Gets the height according to it's possition and returns:
-*
-*	0--> Water hexagon
-*	1--> Mountain hexagon
-*	2--> Land hexagon
-*/
+//Gets the height according to it's possition
 float ATabletop::GetHeight(FVector Vector)
 
 {
@@ -69,8 +52,7 @@ float ATabletop::GetHeight(FVector Vector)
 
 
 	value = (GetTerraininHeight(Vector2D, MountainScale, MountainAmplitude) + GetTerraininHeight(Vector2D, BoulderScale, BoulderAmplitude)) / VoxelSize;
-	//value = fmax(value, 0.1);
-
+	
 	return value;
 
 }
@@ -105,27 +87,17 @@ void ATabletop::RandomizeLayout()
 		PerlinOffset.X = RandomValue * 5000000000.0;
 		PerlinOffset.Y = PerlinOffset.X;
 	}
-
-	//TArray<TArray<float>> floatArray;
-
-
 }
 
 
-
+//Generate map 
 void ATabletop::GenerateMap()
 {
 	FVector Location;
 	World = GetWorld();
-
-	if (BP_VillageHex == nullptr || BP_LandHex == nullptr || BP_MountainHex == nullptr || BP_SeaHex == nullptr ) UE_LOG(LogTemp, Warning, TEXT("No blueprint"));
-
+	
 	RandomizeLayout();
-
-	Heights.Empty();
-	Matrix.Empty();
-	DeleteMap();
-
+	
 	for (int i = 0; i < YCellCount; i++) {
 		for (int j = 0; j < XCellCount; j++) {
 			Location = GenerateVector(j, i);
@@ -147,6 +119,7 @@ void ATabletop::GenerateMap()
 
 }
 
+// Set a SeaLevel to have 25% of SeaHex hexes on tabletop and Mountainlevel to get another 25% as MountainHex
 void ATabletop::SetLevels(TArray<float> levels)
 {
 	int Size = levels.GetAllocatedSize() / levels.GetTypeSize();
@@ -161,6 +134,7 @@ void ATabletop::SetLevels(TArray<float> levels)
 
 }
 
+//If Height below SeaLevel set a SeaHex(SeaLevel value), if it's over MountainLevel set as MountainHex(MountainLevel value)
 void ATabletop::SetHexType()
 {
 	for (int i = 0; i < (XCellCount * YCellCount); i++) {
@@ -168,10 +142,6 @@ void ATabletop::SetHexType()
 			Matrix[i].Z = SeaLevel;
 			continue;
 		}
-		/*if (Matrix[i].Z == VillageLevel) {
-			Matrix[i].Z = -1;
-			continue;
-		}*/
 		if (Matrix[i].Z > MountainLevel) {
 			Matrix[i].Z = MountainLevel;
 			continue;
@@ -179,6 +149,7 @@ void ATabletop::SetHexType()
 	}
 }
 
+//Set villages possition 
 void ATabletop::DrawMap()
 {
  int j = 4;
@@ -197,33 +168,7 @@ void ATabletop::DrawMap()
 	}		
 }
 
-void ATabletop::DeleteMap()
-{
-	if (Hexagons.IsEmpty()) return;
-	for (int i = 0; i < (XCellCount * YCellCount); i++) {
-		if (World->ContainsActor(Hexagons[i])) World->DestroyActor(Hexagons[i]);
-	}
-	Hexagons.Empty();
-	Rotator.Pitch = 0;
-	Rotator.Roll = 0;
-	Rotator.Yaw = 0;
-}
-
-void ATabletop::TestBP()
-{
-	World = GetWorld();
-	FTransform t;
-	FVector v;
-
-	if (BP_VillageHex == nullptr) UE_LOG(LogTemp, Warning, TEXT("No blueprint"));
-	
-	v.X = 0;
-	v.Y = 0;
-	v.Z = 200;
-	t.SetLocation(v);
-	AActor* SpA = World->SpawnActor<AActor>(BP_VillageHex->GeneratedClass,t,f);
-}
-
+//Set random rotation on Z axis
 FRotator ATabletop::SetRotation()
 {
 
@@ -251,12 +196,14 @@ FRotator ATabletop::SetRotation()
 	return Rotator;
 }
 
+// Reset Z value to 0
 FVector ATabletop::SetZ(FVector Vector)
 {
 	Vector.Z = 0;
 	return Vector;
 }
 
+//Return a name from the list
 FString ATabletop::GetName(){
 	FString value;
 	value = Names.HeapTop();
@@ -264,6 +211,7 @@ FString ATabletop::GetName(){
 	return value;
 }
 
+//Get date value
 FVector2D ATabletop::GetDate()
 {
 	FVector2D value;
@@ -272,6 +220,7 @@ FVector2D ATabletop::GetDate()
 	return value;
 }
 
+//Increment season and each 4th turn increase year
 FVector2D ATabletop::incDate()
 {
 	
@@ -287,6 +236,7 @@ FVector2D ATabletop::incDate()
 	return GetDate();
 }
 
+// Hexagons getter for blueprint use(Not possible to copy values with blueprint getter)
 TArray<AActor*> ATabletop::getHexagons()
 {
 	return Hexagons;
